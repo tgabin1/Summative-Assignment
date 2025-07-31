@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Explore Rwanda</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="header-img-container" aria-hidden="true"></div>
+    <h1>Explore Rwanda</h1>
+    <p>Discover the heart of Africa – nature, culture, and heritage</p>
+    <button id="themeToggle" aria-label="Toggle light/dark theme">🌞/🌚</button>
+  </header>
+
+  <section class="search-panel" aria-label="Location search">
+    <input
+      type="text"
+      id="locationInput"
+      placeholder="Enter a location (e.g., Kigali)"
+      aria-label="Enter location"
+    />
+    <button onclick="searchLocation()">Search</button>
+  </section>
+
+  <section class="info-panel">
+    <div id="weather" aria-live="polite"></div>
+    <div id="map" class="map-container" aria-label="Map of Rwanda"></div>
+
+    <div class="category-buttons" role="group" aria-label="Place categories">
+      <button onclick="fetchPlaces('accommodation.hotel')">🏨 Hotels</button>
+      <button onclick="fetchPlaces('catering.restaurant')">🍽 Restaurants</button>
+      <button onclick="fetchPlaces('entertainment.culture')">🎭 Cultural Centers</button>
+      <button onclick="fetchPlaces('historic.memorial')">🕊 Memorials</button>
+      <button onclick="fetchPlaces('leisure.nature_reserve')">🌳 National Parks</button>
+    </div>
+
+    <div class="places-search-container" style="display:none;">
+      <input
+        type="text"
+        id="placesSearchInput"
+        placeholder="Search places (e.g. pizza, cafe)..."
+        aria-label="Search displayed places"
+      />
+    </div>
+
+    <div id="places" class="places-container"></div>
+  </section>
+
+  <section class="trip-planner">
+    <h2>📝 Your Trip Planner</h2>
+    <p>Add places you want to visit to your trip.</p>
+    <div id="tripList" class="trip-list">
+      <p>Your trip is empty. Add places from the list above.</p>
+    </div>
+    <button id="clearTripBtn" aria-label="Clear all trip places">Clear Trip</button>
+  </section>
+
+  <footer>
+    <div class="footer-img-container" aria-hidden="true"></div>
+    <p id="footerText">Built with ❤️ in Rwanda | Inspired by authentic Imigongo art and Rwandan landscapes</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

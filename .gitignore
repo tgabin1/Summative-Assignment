@@ -1,0 +1,23 @@
+# OS-specific system files
+.DS_Store        # macOS
+Thumbs.db        # Windows
+ehthumbs.db
+Desktop.ini
+
+# Editor/IDE configs
+.vscode/
+.idea/
+*.iml
+
+# Temporary files
+*.swp
+*.swo
+
+# Docker-related temp files (optional)
+*.pid
+
+# Environment variables or API key files (if separated)
+.env
+.env.local
+secrets.js
+apikeys.js
