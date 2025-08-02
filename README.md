@@ -135,9 +135,9 @@ explore-rwanda/
 The application uses the following APIs (keys are included for demo purposes):
 
 ```javascript
-const openWeatherApiKey = "d36dd112c52fd3820162c9ca625f70e5";
-const geoapifyApiKey = "51c0df0155be43919d9626f139b1ac27";
-const geoapifyGeoKey = "9679c7404c6c4c978948b981efc0f208";
+const openWeatherApiKey 
+const geoapifyApiKey
+const geoapifyGeoKey 
 ```
 
 ### Environment Variables
@@ -239,5 +239,6 @@ For support and questions:
 ---
 
 **Built with ❤️ in Rwanda | Inspired by authentic Imigongo art and Rwandan landscapes**
+
 
 *Explore Rwanda - Discover the Land of a Thousand Hills* 🏔️
